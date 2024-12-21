@@ -77,7 +77,14 @@ void TaskManager::load()
 
 void TaskManager::clear()
 {
-    tasks.clear();
-    save();
-    std::cout << "All tasks cleared.\n";
+    if (promptForConfirmation("⚠️ WARNING: This will delete all tasks and cannot be undone."))
+    {
+        tasks.clear();
+        save();
+        std::cout << "\033[32m✅ Success: All tasks cleared.\033[0m" << std::endl;
+    }
+    else
+    {
+        std::cout << "\033[36mℹ️ Action canceled: No tasks were cleared.\033[0m" << std::endl;
+    }
 }
