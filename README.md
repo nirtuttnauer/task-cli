@@ -39,6 +39,25 @@ https://roadmap.sh/projects/task-tracker
    ./todo
    ```
 
+4. **Install the Application**:
+   MacOS:
+   ```bash
+    sudo cp ./todo /usr/local/bin/todo
+    ```
+    Linux:
+    ```bash
+    sudo cp ./todo /usr/bin/todo
+    ```
+    Windows:
+    ```bash
+    todo.exe
+    ```
+    
+5. **Run the Application**:
+   ```bash
+   todo
+   ```
+
 ## 📖 Usage
 
 ### Commands
