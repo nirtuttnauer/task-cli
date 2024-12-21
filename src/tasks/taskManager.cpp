@@ -36,9 +36,11 @@ void TaskManager::processCommand(const std::string &command, const std::string &
         editTask(argument , extra);
     }
     else if (command == "mark-in-progress" || command == "mark-inprogress" || command == "mark-inprog" || command == "mark-in" || command == "mark-progress" || command == "mark-prog" || command == "mark-p" || command == "mi" || command == "mip")
+    {
         markTaskAsInProgress(argument);
     }
     else if (command == "mark-done" || command == "mark-complete" || command == "mark-done-task" || command == "mark-complete-task" || command == "mark-completed-task" || command == "mark-completed" || command == "mark-comp" || command == "mark-c" || command == "mark-d" || command == "md" || command == "mc")
+    {
         markTaskAsDone(argument);
     }
     else if (command == "unmark" || command == "um"){
