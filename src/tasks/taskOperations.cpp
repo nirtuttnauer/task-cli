@@ -166,8 +166,6 @@ void TaskManager::printHelp() {
     std::cout << command << "  ./todo delete 1                               " << reset << "❌ Delete task 1\n";
     std::cout << command << "  ./todo status 1 <<< \"2\"                       " << reset << "🔄 Mark task 1 as in-progress" << std::endl;
     std::cout << command << "  ./todo clear <<< \"y\"                          " << reset << "🚨 Clear all tasks" << std::endl << std::endl;
-
-
 }
 
 void TaskManager::markTaskAsInProgress(const std::string &taskIdStr){
@@ -192,6 +190,7 @@ void TaskManager::markTaskAsInProgress(const std::string &taskIdStr){
         std::cerr << "Invalid task ID: " << taskIdStr << "\n";
     }
 }
+
 void TaskManager::markTaskAsDone(const std::string &taskIdStr){
     try {
         int taskId = std::stoi(taskIdStr);
@@ -214,6 +213,7 @@ void TaskManager::markTaskAsDone(const std::string &taskIdStr){
         std::cerr << "Invalid task ID: " << taskIdStr << "\n";
     }
 }
+
 void TaskManager::unmarkTask(const std::string &taskIdStr){
     try {
         int taskId = std::stoi(taskIdStr);
@@ -264,6 +264,7 @@ std::string TaskManager::getStatusFromOption(int option) const
         return "";
     }
 }
+
 std::vector<Task>::iterator TaskManager::findTaskById(int taskId)
 {
     return std::find_if(tasks.begin(), tasks.end(), [taskId](const Task &task) {
