@@ -1,9 +1,5 @@
-#include "taskManager.h"
-#include "taskUtilities.h"
-#include <iostream>
-#include <sstream>
-#include <algorithm>
-#include <stdexcept>
+#include "tasks/taskManager.h"
+#include "utils/tasks/taskUtilities.h"
 
 // Constructor and Destructor
 TaskManager::TaskManager(const char *fileName) : fileName(fileName), jsonFile(fileName)

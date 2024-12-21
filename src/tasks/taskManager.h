@@ -1,10 +1,8 @@
 #ifndef TASK_MANAGER_H
 #define TASK_MANAGER_H
 
-#include "jsonManager.h"
-#include "taskUtilities.h"
-#include <string>
-#include <vector>
+#include "json/jsonManager.h"
+#include "utils/tasks/taskUtilities.h"
 
 class TaskManager {
     // Member variables

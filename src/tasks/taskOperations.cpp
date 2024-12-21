@@ -1,8 +1,4 @@
-#include "taskManager.h"
-#include <iostream>
-#include <sstream>
-#include <algorithm>
-#include <stdexcept>
+#include "tasks/taskManager.h"
 
 void TaskManager::addTask(const std::string &description)
 {

@@ -1,8 +1,7 @@
 #ifndef TASK_UTILITIES_H
 #define TASK_UTILITIES_H
 
-#include <string>
-#include "task.h"
+#include "types/tasks/task.h"
 
 std::string currentTime();
 bool promptForConfirmation(const std::string &message);

@@ -1,7 +1,9 @@
 #ifndef JSONMANAGER_H
 #define JSONMANAGER_H
 
-#include "task.h"
+#include "types/tasks/task.h"
+#include <fstream>
+#include <sstream>
 
 class jsonManager {
 public:

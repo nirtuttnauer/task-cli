@@ -1,8 +1,4 @@
-#include "taskManager.h"
-#include <iostream>
-#include <vector>
-#include <cassert>
-
+#include "tasks/taskManager.h"
 
 int main(int argc, char *argv[]) {
     // Run tests if needed
