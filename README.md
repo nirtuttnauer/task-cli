@@ -1,9 +1,12 @@
 
-# Task CLI Application
+# TODO CLI Application
 
 ## 📋 Overview
 
-The Task CLI application is a command-line tool for managing tasks effectively. It allows users to add, edit, delete, and list tasks, as well as manage their statuses (`todo`, `in-progress`, and `done`). This lightweight application ensures you stay organized and on top of your to-do list.
+The TODO CLI application is a command-line tool for managing tasks effectively. It allows users to add, edit, delete, and list tasks, as well as manage their statuses (`todo`, `in-progress`, and `done`). This lightweight application ensures you stay organized and on top of your to-do list.
+
+This project is an idea of the Roadmap.sh project:
+https://roadmap.sh/projects/task-tracker
 
 ## ✨ Features
 
