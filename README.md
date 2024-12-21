@@ -135,21 +135,6 @@ The test script provides detailed outputs, indicating success or failure for eac
 - Add encryption for sensitive data.
 - (MacOS Feature) Create an hidden folder in icloud to store tasks.
 
-## 📂 Project Structure
-
-```plaintext
-task-cli/
-├── src/
-│   ├── main.cpp          # Entry point of the application
-│   ├── taskManager.cpp   # Implementation of task management logic
-│   ├── taskManager.h     # Header file for the task manager
-│   ├── jsonManager.cpp   # Handles file I/O for task persistence
-│   ├── jsonManager.h     # Header file for the JSON manager
-├── test_script.sh        # Automated script for testing
-├── CMakeLists.txt        # Build configuration
-├── README.md             # Project documentation
-```
-
 ## 🛡️ License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
