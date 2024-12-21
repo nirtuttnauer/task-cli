@@ -19,40 +19,40 @@ TaskManager::~TaskManager()
 // Command Processing
 void TaskManager::processCommand(const std::string &command, const std::string &argument , const std::string &extra)
 {
-    if (command == "add")
+    if (command == "add" || command == "new" || command == "create" || command == "+")
     {
         addTask(argument);
     }
-    else if (command == "list")
+    else if (command == "list" || command == "ls" || command == "show")
     {
         listTasks(argument);
     }
-    else if (command == "delete")
+    else if (command == "delete" || command == "del" || command == "remove" || command == "-" || command == "rm" || command == "destroy")
     {
         deleteTask(argument);
     }
-    else if (command == "edit")
+    else if (command == "edit" || command == "update" || command == "change" || command == "modify" || command == "edit-description" || command == "change-description")
     {
         editTask(argument , extra);
     }
-    else if (command == "mark-in-progress"){
+    else if (command == "mark-in-progress" || command == "mark-inprogress" || command == "mark-inprog" || command == "mark-in" || command == "mark-progress" || command == "mark-prog" || command == "mark-p" || command == "mi" || command == "mip")
         markTaskAsInProgress(argument);
     }
-    else if (command == "mark-done"){
+    else if (command == "mark-done" || command == "mark-complete" || command == "mark-done-task" || command == "mark-complete-task" || command == "mark-completed-task" || command == "mark-completed" || command == "mark-comp" || command == "mark-c" || command == "mark-d" || command == "md" || command == "mc")
         markTaskAsDone(argument);
     }
-    else if (command == "unmark"){
+    else if (command == "unmark" || command == "um"){
         unmarkTask(argument);
     }
-    else if (command == "status")
+    else if (command == "status" || command == "s" || command == "st")
     {
         updateTaskStatus(argument);
     }
-    else if (command == "clear")
+    else if (command == "clear" || command == "c" || command == "clr" || command == "reset" || command == "rm-all" || command == "destroy-all")
     {
         clear();
     }
-    else if (command == "help")
+    else if (command == "help" || command == "h")
     {
         printHelp();
     }
