@@ -22,7 +22,7 @@ https://roadmap.sh/projects/task-tracker
 1. **Clone the Repository**:
    ```bash
    git clone <repository-url>
-   cd task-cli
+   cd todo-cli
    ```
 
 2. **Build the Project**:
