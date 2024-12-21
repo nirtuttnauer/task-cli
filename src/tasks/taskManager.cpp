@@ -52,6 +52,10 @@ void TaskManager::processCommand(const std::string &command, const std::string &
     {
         clear();
     }
+    else if (command == "help")
+    {
+        printHelp();
+    }
     else
     {
         std::cerr << "\033[31m❌ Unknown command: " << command << "\033[0m" << std::endl;

@@ -23,6 +23,7 @@ public:
     void deleteTask(const std::string &taskIdStr);
     void editTask(const std::string &taskIdStr ,const std::string &description);
     void updateTaskStatus(const std::string &taskIdStr);
+    void printHelp();
 
     void unmarkTask(const std::string &taskIdStr);
     void markTaskAsInProgress(const std::string &taskIdStr);

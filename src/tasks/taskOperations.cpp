@@ -141,6 +141,35 @@ void TaskManager::listTasks(const std::string &status)
     }
 }
 
+void TaskManager::printHelp() {
+    const std::string header = "\033[1;36m"; // Bold cyan
+    const std::string command = "\033[1;32m"; // Bold green
+    const std::string reset = "\033[0m";      // Reset
+
+    std::cout << header <<"                 📖 Help Menu" << reset << std::endl;
+
+    std::cout << header << "💡 Available Commands:" << reset << std::endl;
+    std::cout << command << "  add <description>        " << reset << "✏️ Add a new task with the given description" << std::endl;
+    std::cout << command << "  list                    " << reset << "📋 List all tasks" << std::endl;
+    std::cout << command << "  list <status>           " << reset << "📊 List tasks by their status (todo, in-progress, done)" << std::endl;
+    std::cout << command << "  edit <id> <description> " << reset << "🛠️ Edit the description of a task by its ID" << std::endl;
+    std::cout << command << "  delete <id>             " << reset << "🗑️ Delete a task by its ID" << std::endl;
+    std::cout << command << "  status <id>             " << reset << "🔄 Update the status of a task by its ID" << std::endl;
+    std::cout << command << "  clear                   " << reset << "🚨 Clear all tasks (requires confirmation)" << std::endl;
+    std::cout << command << "  help                    " << reset << "ℹ️ Show this help menu" << std::endl << std::endl; 
+
+    std::cout << header << "🛠️ Examples:" << reset << "\n";
+    std::cout << command << "  ./todo add \"Buy groceries\"                    " << reset << "➕ Add a new task" << std::endl;
+    std::cout << command << "  ./todo list                                   " << reset << "📋 List all tasks" << std::endl;
+    std::cout << command << "  ./todo list done                              " << reset << "✅ List all completed tasks" << std::endl;
+    std::cout << command << "  ./todo edit 1 \"Buy groceries and cook dinner\" " << reset << "🛠️ Edit task 1" << std::endl;
+    std::cout << command << "  ./todo delete 1                               " << reset << "❌ Delete task 1\n";
+    std::cout << command << "  ./todo status 1 <<< \"2\"                       " << reset << "🔄 Mark task 1 as in-progress" << std::endl;
+    std::cout << command << "  ./todo clear <<< \"y\"                          " << reset << "🚨 Clear all tasks" << std::endl << std::endl;
+
+
+}
+
 void TaskManager::markTaskAsInProgress(const std::string &taskIdStr){
     try {
         int taskId = std::stoi(taskIdStr);
