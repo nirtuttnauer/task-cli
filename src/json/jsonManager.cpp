@@ -1,22 +1,37 @@
 #include "json/jsonManager.h"
 
 
-jsonManager::jsonManager(const char *fileName) : fileName(fileName)
-{
-    if (!std::filesystem::exists(fileName))
-    {
+jsonManager::jsonManager(const char *fileName) {
+    // Get the user's Documents directory and append the invisible folder path
+    const char *home = std::getenv("HOME"); // Get the home directory
+    if (!home) {
+        throw std::runtime_error("Unable to determine the home directory.");
+    }
+    std::filesystem::path folderPath = std::filesystem::path(home) / "Documents/.todo-cli";
+
+    // Ensure the invisible folder exists
+    if (!std::filesystem::exists(folderPath)) {
+        std::filesystem::create_directory(folderPath);
+    }
+
+    // Set the JSON file path
+    this->fileName = (folderPath / fileName).string();
+
+    // Check if the JSON file exists, otherwise create it
+    if (!std::filesystem::exists(this->fileName)) {
         create();
     }
 }
 
-void jsonManager::create(){
-    std::ofstream outFile(this->fileName, std::ios::trunc);  // Use 'this->fileName'
+void jsonManager::create() {
+    std::ofstream outFile(this->fileName, std::ios::trunc);
     if (!outFile.is_open()) {
         throw std::runtime_error("Failed to open file for writing: " + this->fileName);
     }
-    outFile << "[]";
+    outFile << "[]"; // Write an empty JSON array
     outFile.close();
 }
+
 
 // Utility to escape JSON strings
 std::string escapeJsonString(const std::string& str) {
